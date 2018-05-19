@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Slabo 27px', serif;
+}
+html{
+  height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(http://dissenyaweb.com/blog/diseno_web/wp-content/uploads/christian-background-loops.jpg);
+    background-size: cover;
+}
+.caja{
+  width: 480px;
+  list-style-type: none;
+}
+.caja li{
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  border: 15px solid rgba(14, 24, 167, 0.568);
+  margin: 10px;
+  box-sizing: border-box;
+  transform: scale(1);
+  transition: all .2s ease-out;
+}
+
+.caja li:hover{
+  transform: scale(1.2);
+}
+
+.caja li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.caja li img{
+  width: 100%;
+}
+
+.fondo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;   /*para dar priorodad a las los "div" las "cosas" */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.692);
+}
+.fondo .close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+/**/
