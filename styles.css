@@ -17,7 +17,6 @@ body{
 }
 .caja{
   width: 480px;
-  list-style-type: none;
 }
 .caja li{
   width: 200px;
@@ -49,17 +48,18 @@ body{
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 3;   /*para dar priorodad a las los "div" las "cosas" */
+  z-index: 1;   /*escalar preferencia en pantalla */
   display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.692);
 }
-.fondo .close {
+.close {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  bottom: 25%;
+  justify-content: center;
   color: rgb(255, 255, 255);
   text-decoration: none;
+  font-size: 14pt;
 }
 /**/

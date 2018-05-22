@@ -1,16 +1,15 @@
-var modal = document.querySelector('.fondo');
-var closeButton = document.querySelector('.fondo .close');
-var anchors = document.querySelectorAll('.caja a');
+var modal = document.querySelector('.fondo'); // selecciona el valor dde .fondo en el documento
+var closeButton = document.querySelector('.fondo .close'); // selecciona los valores dde .close .fondo en el documento
+var anchors = document.querySelectorAll('.caja a'); // selecciona el valor dde .caja en el documento y crea a "a"
 
-closeButton.addEventListener('click', function(e){
-  e.preventDefault();
-  modal.style.display = 'none';
+closeButton.addEventListener('click', function(e){ //se crea un evento 
+  e.preventDefault(); // detener la accion del evento 
+  modal.style.display = 'none';  //La segunda imagen no es visible y el espacio es ocupado por el contenido que está a continuación
 })
-anchors.forEach(a => a.addEventListener('click', function(e){
-  e.preventDefault();
-  var img = this.querySelector('img');
-  var modalImg = modal.querySelector('img');
-  modalImg.src = img.src;
-  modal.style.display = 'flex';
-  TweenMax.from('.fondo', 1, {scale: 4});
-}));
+anchors.forEach(a => a.addEventListener('click', function(e){ 
+  e.preventDefault(); //detiene la accion del evento 
+  var img = this.querySelector('img');   //se proporciona un nuevo valor a los img
+  var modalImg = modal.querySelector('img'); //se proporciona un nuevo valor a los img del fondo
+  modalImg.src = img.src; //cambia la imagen de div fondo por div  
+  modal.style.display = 'flex'; //centara lo que se muestra en el display
+}));// en este caso las imagenes aumentan su escala en un numero un este caso 4
